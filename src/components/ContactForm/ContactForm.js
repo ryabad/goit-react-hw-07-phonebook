@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectError } from 'store/user/selectors';
-import { addUserAction } from 'store/user/userService';
+import { addContactAction } from 'store/user/userService';
 
 import { nanoid } from 'nanoid';
 
@@ -27,7 +27,7 @@ const ContactForm = () => {
       ...contact,
       id: nanoid(),
     };
-    dispatch(addUserAction(newContact));
+    dispatch(addContactAction(newContact));
     Notiflix.Notify.success(`${newContact.name} has been added!`);
   };
 

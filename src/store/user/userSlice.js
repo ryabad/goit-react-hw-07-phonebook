@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from './initialState';
 import {
-  addUserAction,
-  deleteUserAction,
-  fetchUsersAction,
+  addContactAction,
+  deleteContactAction,
+  fetchContactAction,
 } from './userService';
 
 const handlePending = state => {
@@ -25,13 +25,13 @@ export const userSlice = createSlice({
   initialState,
   extraReducers: builder => {
     builder
-      .addCase(fetchUsersAction.fulfilled, (state, action) => {
+      .addCase(fetchContactAction.fulfilled, (state, action) => {
         state.user = action.payload;
       })
-      .addCase(addUserAction.fulfilled, (state, action) => {
+      .addCase(addContactAction.fulfilled, (state, action) => {
         state.user.push(action.payload);
       })
-      .addCase(deleteUserAction.fulfilled, (state, action) => {
+      .addCase(deleteContactAction.fulfilled, (state, action) => {
         const index = state.user.findIndex(
           user => user.id === action.payload.id
         );

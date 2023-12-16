@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { deleteUserAction, fetchUsersAction } from 'store/user/userService';
+import {
+  deleteContactAction,
+  fetchContactAction,
+} from 'store/user/userService';
 import { selectError, selectIsLoading } from 'store/user/selectors';
 import { selectFilteredUSers } from 'store/selectors';
 
@@ -17,12 +20,12 @@ const ContactList = () => {
 
   const deletingContact = id => {
     const deletedContact = contacts.find(el => el.id === id);
-    dispatch(deleteUserAction(id));
+    dispatch(deleteContactAction(id));
     Notiflix.Notify.info(`${deletedContact.name} was deleted!`);
   };
 
   useEffect(() => {
-    dispatch(fetchUsersAction());
+    dispatch(fetchContactAction());
   }, [dispatch]);
 
   return (
