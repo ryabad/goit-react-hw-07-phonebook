@@ -36,19 +36,21 @@ const ContactList = () => {
         </p>
       )}
       {isLoading && !error && <p>Loading...</p>}
-      {contacts.map(el => (
-        <li className={css.item} key={el.id}>
-          <p>
-            {el.name}: {el.phone}
-          </p>
-          <button
-            onClick={() => deletingContact(el.id)}
-            className={css.deleteBtn}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
+      {contacts
+        .sort((a, b) => b.id - a.id)
+        .map(el => (
+          <li className={css.item} key={el.id}>
+            <p>
+              {el.name}: {el.phone}
+            </p>
+            <button
+              onClick={() => deletingContact(el.id)}
+              className={css.deleteBtn}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
     </ul>
   );
 };
