@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.addContactBtn {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(10, 14, 206);
+  border: 1px solid rgb(10, 14, 206);
+  color: #ffffff;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.addContactBtn:hover,
+.addContactBtn:focus {
+  background-color: #ffffff;
+  color: rgb(10, 14, 206);
+}
+
+.nameInput,
+.numberInput {
+  width: 200px;
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

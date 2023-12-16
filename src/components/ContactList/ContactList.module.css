@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.deleteBtn {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(10, 14, 206);
+  border: 1px solid rgb(10, 14, 206);
+  color: #ffffff;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.deleteBtn:hover,
+.deleteBtn:focus {
+  background-color: #ffffff;
+  color: rgb(10, 14, 206);
+}

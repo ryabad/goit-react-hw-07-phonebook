@@ -1,0 +1,13 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.title,
+.contacts {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-size: 34px;
+}
